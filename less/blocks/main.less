@@ -1,0 +1,86 @@
+/* ------------------------------------------ */
+/* MAIN BLOCK
+/* ------------------------------------------ */
+.main {
+	display: flex;
+
+	padding: 40px 15px;
+
+	color: #525252;
+	background: url(../img/main/main__bg.jpg) no-repeat center center;
+	background-size: cover;
+
+	flex: 1 0 auto;
+	align-items: center;
+
+	&__container {
+		max-width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+
+		text-align: center;
+	}
+}
+
+.main__heading {
+	max-width: @break-point;
+	margin: 0 auto 15px;
+
+	color: @color__white;
+
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 1.6;
+
+	&--mobile {
+		display: block;
+
+		@media (min-width: @break-point) {
+			display: none;
+		}
+	}
+
+	&--desktop {
+		display: none;
+
+		@media (min-width: @break-point) {
+			display: block;
+		}
+	}
+}
+
+.main__logo {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	margin: 15px auto;
+}
+
+.main__appstore {
+	display: none;
+
+	margin: 20px auto 30px;
+
+	font-size: 0;
+	line-height: 0;
+
+	img {
+		width: 100%;
+		max-width: 150px;
+		height: auto;
+	}
+
+	@media (min-width: @break-point) {
+		display: block;
+	}
+}
+
+.main__applink {
+	display: block;
+
+	width: 100%;
+	margin: 15px auto;
+	padding: 20px;
+
+	font-size: 20px;
+}
