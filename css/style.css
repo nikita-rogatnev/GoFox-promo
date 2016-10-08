@@ -6,6 +6,14 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue.woff2') format('woff2'), url('../fonts/HelveticaNeue.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url('../fonts/HelveticaNeue-Light.woff2') format('woff2'), url('../fonts/HelveticaNeue-Light.ttf') format('truetype');
+}
 html {
   height: 100%;
   color: #f3f4f5;
@@ -17,7 +25,7 @@ body {
   -ms-flex-direction: column;
       flex-direction: column;
   height: 100%;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue Light", Helvetica, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.4;
@@ -34,7 +42,7 @@ body {
 .main {
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 15px;
+  padding: 15px;
   color: #525252;
   background: url(../img/main/main__bg.jpg) no-repeat center center;
   background-size: cover;
@@ -51,11 +59,11 @@ body {
 }
 .main__heading {
   max-width: 600px;
-  margin: 0 auto 15px;
+  margin: 0 auto 30px;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 .main__heading--mobile {
   display: block;
@@ -73,15 +81,25 @@ body {
     display: block;
   }
 }
+@media (min-width: 600px) {
+  .main__heading {
+    font-size: 32px;
+  }
+}
 .main__logo {
   width: 100%;
-  max-width: 400px;
+  max-width: 240px;
   height: auto;
-  margin: 15px auto;
+}
+@media (min-width: 600px) {
+  .main__logo {
+    max-width: 400px;
+    margin: 15px auto;
+  }
 }
 .main__appstore {
   display: none;
-  margin: 20px auto 30px;
+  margin: 20px auto 35px;
   font-size: 0;
   line-height: 0;
 }
@@ -99,8 +117,24 @@ body {
   display: block;
   width: 100%;
   margin: 15px auto;
-  padding: 20px;
+  padding: 10px;
+  border: 0;
+  outline: none;
   font-size: 20px;
+  line-height: 1;
+}
+.main__applink:focus {
+  border: 0;
+  outline: none;
+}
+.main__applink:active {
+  border: 0;
+  outline: none;
+}
+@media (min-width: 600px) {
+  .main__applink {
+    padding: 15px 20px;
+  }
 }
 /* ------------------------------------------ */
 /* FOOTER BLOCK

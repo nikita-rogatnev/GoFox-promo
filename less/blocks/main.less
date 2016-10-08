@@ -4,7 +4,7 @@
 .main {
 	display: flex;
 
-	padding: 40px 15px;
+	padding: 15px;
 
 	color: #525252;
 	background: url(../img/main/main__bg.jpg) no-repeat center center;
@@ -24,13 +24,13 @@
 
 .main__heading {
 	max-width: @break-point;
-	margin: 0 auto 15px;
+	margin: 0 auto 30px;
 
 	color: @color__white;
 
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: normal;
-	line-height: 1.6;
+	line-height: 1.2;
 
 	&--mobile {
 		display: block;
@@ -47,19 +47,27 @@
 			display: block;
 		}
 	}
+
+	@media (min-width: @break-point) {
+		font-size: 32px;
+	}
 }
 
 .main__logo {
 	width: 100%;
-	max-width: 400px;
+	max-width: 240px;
 	height: auto;
-	margin: 15px auto;
+
+	@media (min-width: @break-point) {
+		max-width: 400px;
+		margin: 15px auto;
+	}
 }
 
 .main__appstore {
 	display: none;
 
-	margin: 20px auto 30px;
+	margin: 20px auto 35px;
 
 	font-size: 0;
 	line-height: 0;
@@ -80,7 +88,25 @@
 
 	width: 100%;
 	margin: 15px auto;
-	padding: 20px;
+	padding: 10px;
+
+	border: 0;
+	outline: none;
 
 	font-size: 20px;
+	line-height: 1;
+
+	&:focus {
+		border: 0;
+		outline: none;
+	}
+
+	&:active {
+		border: 0;
+		outline: none;
+	}
+
+	@media (min-width: @break-point) {
+		padding: 15px 20px;
+	}
 }
