@@ -1,0 +1,65 @@
+/* ------------------------------------------ */
+/* FORM BLOCK
+/* ------------------------------------------ */
+.form {
+	width: 100%;
+
+	label {
+		display: block;
+
+		width: 100%;
+		margin-top: 10px;
+
+		text-align: left;
+		text-transform: uppercase;
+
+		color: @color__white;
+
+		font-weight: bold;
+
+		span {
+			display: block;
+		}
+
+		@media (min-width: @break-point) {
+			width: 24%;
+
+			&:nth-child(7) {
+				width: 49%;
+			}
+		}
+	}
+
+	input {
+		display: block;
+
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 10px;
+
+		border: 0;
+		outline: none;
+	}
+
+	.form__button {
+		margin: 20px 0 10px;
+		padding: 10px 0;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		color: @color__white;
+		border: 2px solid @color__white;
+		background: transparent;
+
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	@media (min-width: @break-point) {
+		display: flex;
+
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

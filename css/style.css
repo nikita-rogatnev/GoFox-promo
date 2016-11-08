@@ -37,6 +37,19 @@ body {
   display: none;
 }
 /* ------------------------------------------ */
+/* FOOTER BLOCK
+/* ------------------------------------------ */
+.header {
+  width: 100%;
+  padding: 5px 50px;
+  text-align: left;
+  color: #ffffff;
+  background: #ed257a;
+  line-height: 1;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+}
+/* ------------------------------------------ */
 /* MAIN BLOCK
 /* ------------------------------------------ */
 .main {
@@ -44,7 +57,7 @@ body {
   display: flex;
   padding: 15px;
   color: #525252;
-  background: url(../img/main/main__bg.jpg) no-repeat center center;
+  background: url(../images/bg.jpg) no-repeat center center;
   background-size: cover;
   -ms-flex: 1 0 auto;
       flex: 1 0 auto;
@@ -134,6 +147,61 @@ body {
 @media (min-width: 600px) {
   .main__applink {
     padding: 15px 20px;
+  }
+}
+/* ------------------------------------------ */
+/* FORM BLOCK
+/* ------------------------------------------ */
+.form {
+  width: 100%;
+}
+.form label {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+}
+.form label span {
+  display: block;
+}
+@media (min-width: 600px) {
+  .form label {
+    width: 24%;
+  }
+  .form label:nth-child(7) {
+    width: 49%;
+  }
+}
+.form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 0;
+  outline: none;
+}
+.form .form__button {
+  margin: 20px 0 10px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  background: transparent;
+  font-size: 1em;
+  font-weight: bold;
+}
+@media (min-width: 600px) {
+  .form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /* ------------------------------------------ */

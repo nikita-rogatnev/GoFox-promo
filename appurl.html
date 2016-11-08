@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoFox | Mobile On-Demand Botox</title>
+
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <meta name="apple-itunes-app" content="app-id=1117132640, app-argument=myURL" />
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header hidden">
+
+        <!-- DOWNLOAD APP -->
+        <a href="#"></a>
+        <!-- DOWNLOAD APP END -->
+
+        <!-- OPEN APP -->
+        <a href="com.entechsolutions.gofox://resource?refcode=CODE" target="_blank"></a>
+        <!-- OPEN APP END -->
+
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN -->
+    <main class="main">
+        <div class="main__container">
+
+            <!-- GOFOX LOGO IMAGE -->
+            <img src="./images/main/main__logo.png" class="main__logo" alt="GoFox logo">
+            <!-- GOFOX LOGO IMAGE END -->
+
+            <!-- MOBILE CONTENT -->
+            <h1 class="main__heading main__heading--mobile">Open this link with our app and get a bonus upon registration</h2>
+            <!-- MOBILE CONTENT END -->
+
+            <!-- DESKTOP CONTENT -->
+            <h1 class="main__heading main__heading--desktop">Install our app, open this link from your phone and get a bonus</h2>
+            <a href="https://itunes.apple.com/us/app/gofox-app/id1117132640?mt=8" class="main__appstore"><img src="./images/main/main__appstore.png" alt="appstore"></a>
+            <!-- DESKTOP CONTENT END -->
+
+            <!-- REGISTRATION FORM -->
+            <form name="regForm" action="register" method="post" onsubmit="return validateForm()" class="form">
+                <label for="email">
+                    <span>Email:</span>
+                    <input id="email" type="text" name="email">
+                </label>
+
+                <label for="firstname">
+                    <span>First Name:</span>
+                    <input id="firstname" type="text" name="firstname">
+                </label>
+
+                <label for="lastname">
+                    <span>Last Name:</span>
+                    <input id="lastname" type="text" name="lastname">
+                </label>
+
+                <label for="phone">
+                    <span>Phone:</span>
+                    <input id="phone" type="phone" name="phone">
+                </label>
+
+                <label for="password0">
+                    <span>Password:</span>
+                    <input id="password0" type="password" name="password0">
+                </label>
+
+                <label for="password1">
+                    <span>Repeat Password:</span>
+                    <input id="password1" type="password" name="password1">
+                </label>
+
+                <label for="refcode">
+                    <span>Ref code:</span>
+                    <input id="refcode" type="text" name="refcode" value="%%refcode%%">
+                </label>
+
+                <input type="submit" value="Submit" class="form__button">
+            </form>
+            <!-- REGISTRATION FORM END -->
+
+            <!-- PROMO LINK -->
+            <a class="main__heading hidden" href="com.entechsolutions.gofox://resource?refcode=%%refcode%%">Get a bonus!</a>
+            <!-- PROMO LINK END -->
+
+        </div>
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__cantainer">
+
+            <!-- FOOTER COPYRIGHT LINKS -->
+            <div class="footer__copyright">
+                <a href="mailto:book@gofoxapp.com">book@gofoxapp.com</a><br>
+                <a href="tel:305-800-3699">305-800-FOXY (3699)</a>
+            </div>
+            <!-- FOOTER COPYRIGHT LINKS END -->
+
+            <!-- FOOTER SOCIAL LINKS -->
+            <div class="footer__social">
+                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+            </div>
+            <!-- FOOTER SOCIAL LINKS END -->
+
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+    </script>
+
+    <script>
+        function validateForm() {
+            var form = document.forms["regForm"];
+            var password0 = form["password0"].value;
+
+            if (password0 == null || password0 == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (password0.length < 8 || password0.length > 25) {
+                alert("Password must be between 8 and 25 symbols");
+                return false;
+            }
+            var password1 = form["password1"].value;
+            if (password1 == null || password1 == "" || password0 != password1) {
+                alert("Passwords aren't equal");
+                return false;
+            }
+            var firstName = form["firstname"].value;
+            if (firstName == null || firstName == "") {
+                alert("Please enter first name");
+                return false;
+            }
+            var lastName = form["lastname"].value;
+            if (lastName == null || lastName == "") {
+                alert("Please enter first name");
+                return false;
+            }
+            var phone = form["phone"].value;
+            if (phone == null || phone == "" || isNaN(phone) || phone < 1000000000 || phone > 1999999999) {
+                alert("Please enter your phone");
+                return false;
+            }
+            var email = form["email"].value;
+            if (email == null || email == "" || !validateEmail(email)) {
+                alert("Please enter your email");
+                return false;
+            }
+
+        }
+    </script>
+    <!-- SCRIPTS END -->
+
+</body>
+
+</html>
