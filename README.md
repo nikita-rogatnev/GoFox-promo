@@ -1,6 +1,6 @@
 # GoFox-promo [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url] [![devDependency status][dev-dependency-image]][dev-dependency-url]
 
-https://rogatnev-nikita.github.io/GoFox-promo/
+http://rogatnev.ru/GoFox-promo/appurl.html
 
 [travis-image]: https://travis-ci.org/rogatnev-nikita/GoFox-promo.svg?branch=master
 [travis-url]: https://travis-ci.org/rogatnev-nikita/GoFox-promo
