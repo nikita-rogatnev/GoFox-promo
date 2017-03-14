@@ -1,6 +1,5 @@
-# GoFox-promo [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url] [![devDependency status][dev-dependency-image]][dev-dependency-url]
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/rogatnev-nikita/GoFox-promo.svg)](https://greenkeeper.io/)
+# GoFox-promo
+[![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url] [![devDependency status][dev-dependency-image]][dev-dependency-url]
 
 http://rogatnev.ru/GoFox-promo/appurl.html
 
