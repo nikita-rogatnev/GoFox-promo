@@ -14,7 +14,7 @@
     "homepage": "https://github.com/rogatnev-nikita/GoFox-promo",
     "devDependencies": {
         "editorconfig-tools": "^0.1.1",
-        "autoprefixer": "^6.3.0",
+        "autoprefixer": "^7.2.5",
         "cssnano": "^3.0.0",
         "grunt": "^1.0.1",
         "grunt-contrib-less": "^1.3.0",
